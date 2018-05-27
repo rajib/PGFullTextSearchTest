@@ -1,85 +1,112 @@
-<%= form_for(@indent) do |f| %>
-  <% if @indent.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@indent.errors.count, "error") %> prohibited this indent from being saved:</h2>
-
-      <ul>
-      <% @indent.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @indent, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :warehouse, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :warehouse, class: 'text_field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :no, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :no, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :grp, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :grp, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :item, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :item, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :make, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :make, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :uom, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :uom, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :qt_p, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :qt_p, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dt, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dt, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rq, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :rq, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cc, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cc, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :remarks, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :remarks, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :details, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :details, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pr_po, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pr_po, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :by, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :by, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :status, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :status, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :date, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :date, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :person, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :person, class: 'text_field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :warehouse %><br>
-    <%= f.text_field :warehouse %>
-  </div>
-  <div class="field">
-    <%= f.label :no %><br>
-    <%= f.text_field :no %>
-  </div>
-  <div class="field">
-    <%= f.label :grp %><br>
-    <%= f.text_field :grp %>
-  </div>
-  <div class="field">
-    <%= f.label :item %><br>
-    <%= f.text_field :item %>
-  </div>
-  <div class="field">
-    <%= f.label :make %><br>
-    <%= f.text_field :make %>
-  </div>
-  <div class="field">
-    <%= f.label :uom %><br>
-    <%= f.text_field :uom %>
-  </div>
-  <div class="field">
-    <%= f.label :qt_p %><br>
-    <%= f.text_field :qt_p %>
-  </div>
-  <div class="field">
-    <%= f.label :dt %><br>
-    <%= f.text_field :dt %>
-  </div>
-  <div class="field">
-    <%= f.label :rq %><br>
-    <%= f.text_field :rq %>
-  </div>
-  <div class="field">
-    <%= f.label :cc %><br>
-    <%= f.text_field :cc %>
-  </div>
-  <div class="field">
-    <%= f.label :remarks %><br>
-    <%= f.text_field :remarks %>
-  </div>
-  <div class="field">
-    <%= f.label :details %><br>
-    <%= f.text_area :details %>
-  </div>
-  <div class="field">
-    <%= f.label :pr_po %><br>
-    <%= f.text_field :pr_po %>
-  </div>
-  <div class="field">
-    <%= f.label :by %><br>
-    <%= f.text_field :by %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :person %><br>
-    <%= f.text_field :person %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, class: 'btn btn-primary' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  indents_path, class: 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

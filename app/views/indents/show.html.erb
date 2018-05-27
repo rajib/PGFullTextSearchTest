@@ -1,89 +1,55 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Indent -%>
+<div class="page-header">
+  <h1><%=t '.title', default: model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Warehouse:</strong>
-  <%= @indent.warehouse %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:warehouse) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.warehouse %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:no) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.no %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:grp) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.grp %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:item) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.item %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:make) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.make %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:uom) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.uom %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:qt_p) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.qt_p %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dt) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.dt %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:rq) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.rq %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cc) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.cc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:remarks) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.remarks %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:details) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.details %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pr_po) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.pr_po %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:by) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.by %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:status) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.status %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:date) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.date %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:person) %></dt>
+      <dd><pre class="prettyprint"><%= @indent.person %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>No:</strong>
-  <%= @indent.no %>
-</p>
-
-<p>
-  <strong>Grp:</strong>
-  <%= @indent.grp %>
-</p>
-
-<p>
-  <strong>Item:</strong>
-  <%= @indent.item %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @indent.make %>
-</p>
-
-<p>
-  <strong>Uom:</strong>
-  <%= @indent.uom %>
-</p>
-
-<p>
-  <strong>Qt p:</strong>
-  <%= @indent.qt_p %>
-</p>
-
-<p>
-  <strong>Dt:</strong>
-  <%= @indent.dt %>
-</p>
-
-<p>
-  <strong>Rq:</strong>
-  <%= @indent.rq %>
-</p>
-
-<p>
-  <strong>Cc:</strong>
-  <%= @indent.cc %>
-</p>
-
-<p>
-  <strong>Remarks:</strong>
-  <%= @indent.remarks %>
-</p>
-
-<p>
-  <strong>Details:</strong>
-  <%= @indent.details %>
-</p>
-
-<p>
-  <strong>Pr po:</strong>
-  <%= @indent.pr_po %>
-</p>
-
-<p>
-  <strong>By:</strong>
-  <%= @indent.by %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @indent.status %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @indent.date %>
-</p>
-
-<p>
-  <strong>Person:</strong>
-  <%= @indent.person %>
-</p>
-
-<%= link_to 'Edit', edit_indent_path(@indent) %> |
-<%= link_to 'Back', indents_path %>
+<div class="form-group">
+  <%= link_to t('.back', default: t("helpers.links.back")),
+              indents_path, class: 'btn btn-default'  %>
+  <%= link_to t('.edit', default: t("helpers.links.edit")),
+              edit_indent_path(@indent), class: 'btn btn-default' %>
+  <%= link_to t('.destroy', default: t("helpers.links.destroy")),
+              indent_path(@indent),
+              method: 'delete',
+              data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
+              class: 'btn btn-danger' %>
+</div>
