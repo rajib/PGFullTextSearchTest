@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Indents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Warehouse</th>
+      <th>No</th>
+      <th>Grp</th>
+      <th>Item</th>
+      <th>Make</th>
+      <th>Uom</th>
+      <th>Qt p</th>
+      <th>Dt</th>
+      <th>Rq</th>
+      <th>Cc</th>
+      <th>Remarks</th>
+      <th>Details</th>
+      <th>Pr po</th>
+      <th>By</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @indents.each do |indent| %>
+      <tr>
+        <td><%= indent.warehouse %></td>
+        <td><%= indent.no %></td>
+        <td><%= indent.grp %></td>
+        <td><%= indent.item %></td>
+        <td><%= indent.make %></td>
+        <td><%= indent.uom %></td>
+        <td><%= indent.qt_p %></td>
+        <td><%= indent.dt %></td>
+        <td><%= indent.rq %></td>
+        <td><%= indent.cc %></td>
+        <td><%= indent.remarks %></td>
+        <td><%= indent.details %></td>
+        <td><%= indent.pr_po %></td>
+        <td><%= indent.by %></td>
+        <td><%= indent.status %></td>
+        <td><%= indent.date %></td>
+        <td><%= indent.person %></td>
+        <td><%= link_to 'Show', indent %></td>
+        <td><%= link_to 'Edit', edit_indent_path(indent) %></td>
+        <td><%= link_to 'Destroy', indent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Indent', new_indent_path %>

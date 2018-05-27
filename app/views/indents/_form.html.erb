@@ -1,0 +1,85 @@
+<%= form_for(@indent) do |f| %>
+  <% if @indent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@indent.errors.count, "error") %> prohibited this indent from being saved:</h2>
+
+      <ul>
+      <% @indent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :warehouse %><br>
+    <%= f.text_field :warehouse %>
+  </div>
+  <div class="field">
+    <%= f.label :no %><br>
+    <%= f.text_field :no %>
+  </div>
+  <div class="field">
+    <%= f.label :grp %><br>
+    <%= f.text_field :grp %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
+  </div>
+  <div class="field">
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </div>
+  <div class="field">
+    <%= f.label :uom %><br>
+    <%= f.text_field :uom %>
+  </div>
+  <div class="field">
+    <%= f.label :qt_p %><br>
+    <%= f.text_field :qt_p %>
+  </div>
+  <div class="field">
+    <%= f.label :dt %><br>
+    <%= f.text_field :dt %>
+  </div>
+  <div class="field">
+    <%= f.label :rq %><br>
+    <%= f.text_field :rq %>
+  </div>
+  <div class="field">
+    <%= f.label :cc %><br>
+    <%= f.text_field :cc %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_area :details %>
+  </div>
+  <div class="field">
+    <%= f.label :pr_po %><br>
+    <%= f.text_field :pr_po %>
+  </div>
+  <div class="field">
+    <%= f.label :by %><br>
+    <%= f.text_field :by %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :person %><br>
+    <%= f.text_field :person %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
