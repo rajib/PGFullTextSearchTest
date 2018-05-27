@@ -11,10 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180527075128) do
+ActiveRecord::Schema.define(version: 20180527121621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_trgm"
+  enable_extension "unaccent"
 
   create_table "indents", force: :cascade do |t|
     t.string   "warehouse"
@@ -37,5 +39,15 @@ ActiveRecord::Schema.define(version: 20180527075128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "indents", ["by"], name: "index_indents_on_by", using: :btree
+  add_index "indents", ["details"], name: "index_indents_on_details", using: :btree
+  add_index "indents", ["item"], name: "index_indents_on_item", using: :btree
+  add_index "indents", ["make"], name: "index_indents_on_make", using: :btree
+  add_index "indents", ["no"], name: "index_indents_on_no", using: :btree
+  add_index "indents", ["person"], name: "index_indents_on_person", using: :btree
+  add_index "indents", ["pr_po"], name: "index_indents_on_pr_po", using: :btree
+  add_index "indents", ["remarks"], name: "index_indents_on_remarks", using: :btree
+  add_index "indents", ["warehouse"], name: "index_indents_on_warehouse", using: :btree
 
 end

@@ -16,7 +16,7 @@ class FakeData
         rq: Faker::Date.backward(154).strftime("%d/%m"),
         cc: "None",
         remarks: nil,
-        details: Faker::Lorem.sentence,
+        details: Faker::SiliconValley.quote,
         pr_po: Faker::Company.catch_phrase,
         by: n.split(' ').first,
         status: "RFQ/#{Faker::Number.between(1, 60)}",

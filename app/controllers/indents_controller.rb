@@ -4,7 +4,11 @@ class IndentsController < ApplicationController
   # GET /indents
   # GET /indents.json
   def index
-    @indents = Indent.all
+    if params[:search_for_matches] && !params[:search_for_matches].empty?
+      @indents = Indent.search_for_full_text(params[:search_for_matches]).page(params[:page])
+    else
+      @indents = Indent.all.order("created_at DESC").page params[:page]
+    end    
   end
 
   # GET /indents/1
