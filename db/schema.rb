@@ -41,14 +41,9 @@ ActiveRecord::Schema.define(version: 20180527171313) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "indents", ["by"], name: "index_indents_on_by", using: :btree
   add_index "indents", ["details"], name: "index_indents_on_details", using: :btree
-  add_index "indents", ["item"], name: "index_indents_on_item", using: :btree
-  add_index "indents", ["make"], name: "index_indents_on_make", using: :btree
+  add_index "indents", ["grp"], name: "index_indents_on_grp", using: :btree
   add_index "indents", ["no"], name: "index_indents_on_no", using: :btree
-  add_index "indents", ["person"], name: "index_indents_on_person", using: :btree
-  add_index "indents", ["pr_po"], name: "index_indents_on_pr_po", using: :btree
-  add_index "indents", ["remarks"], name: "index_indents_on_remarks", using: :btree
   add_index "indents", ["warehouse"], name: "index_indents_on_warehouse", using: :btree
 
 end

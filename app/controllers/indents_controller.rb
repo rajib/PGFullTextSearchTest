@@ -8,7 +8,7 @@ class IndentsController < ApplicationController
       @total_indents = Indent.search_for_full_text(params[:search_for_matches])
       @indents = @total_indents.page(params[:page])
     else
-      @indents = Indent.all.order("created_at DESC").page params[:page]
+      @indents = Indent.all.page params[:page]
     end    
   end
 

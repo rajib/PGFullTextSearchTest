@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* bundle install
 
-Things you may want to cover:
+* rake db:create
 
-* Ruby version
+* rake db:migrate
 
-* System dependencies
+* open rails console and execute ' FakeData.populate ' to create test data.
 
-* Configuration
+* rails s
 
-* Database creation
+* go to browser and open http://localhost:3000
 
-* Database initialization
+* Features
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  hoûse = accent error search
+  skeletons = singular plural error search
+  Polarise = will also search for Polarised search based on english dictionary
+  cupper (instead of copper) = typo error search
+  No Indexing required everytime adding a new data it will be automatically available on teh search results, as it handles by pg
