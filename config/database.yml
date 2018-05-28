@@ -23,8 +23,8 @@ default: &default
 
 development:
   <<: *default
-  database: industryprime_test_development
-  username: rajib
+  database: pg_full_text_search_development
+  username: pgusername
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
