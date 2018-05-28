@@ -14,8 +14,8 @@
 
 * Features
 
-  <p>hoûse = accent error search</p>
-  <p>skeletons = singular plural error search</p>
-  <p>Polarise = will also search for Polarised search based on english dictionary</p>
-  <p>cupper (instead of copper) = typo error search</p>
-  <p>No Indexing required everytime adding a new data it will be automatically available on teh search results, as it handles by pg</p>
+ hoûse = accent error search  </br>
+ skeletons = singular plural error search  </br>
+ Polarise = will also search for Polarised search based on english dictionary  </br>
+ cupper (instead of copper) = typo error search  </br>
+ No Indexing required everytime adding a new data it will be automatically available on teh search results, as it handles by pg  </br>
